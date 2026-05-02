@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #1e3650; 
+    --secondary-color: #8dbcd8; 
+    --text-dark: #2e4b7e;
+    --text-light: #163462;
+    --white: #bfe3ef;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.box-container {
+    background-color: var(--white);
+    width: 400px; 
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #001a2c;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+.submit-btn {
+    background-color: #0ab4bd;
+ border-radius: 25px;
+ color: #fff;
+ cursor: pointer;
+ padding: 15px 30px;
+ font-size: 18px;
+ font-weight: bold;
+ letter-spacing: 1px;
+ border: none;
+}
+.submit-btn:hover {
+ background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+ animation: slidernbw 5s linear infinite;
+ color: #000;
+}
+
+@keyframes slidernbw {
+ to {
+  background-position: 20vw;
+ }
+}
+
+
+.profile-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #ba0ade;
+    padding-bottom: 8px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.data {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+@media (max-width: 600px) {
+    .box-container {
+        width: 100%;
+        padding: 25px;
+    }
+    
+    .profile-details p {
+        flex-direction: column; 
+        border-bottom: none;
+        background: #0d2c40;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

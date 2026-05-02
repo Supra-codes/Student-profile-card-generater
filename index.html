@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <div class="box-container" id="form-container">
+            <h2>Enter Student Details</h2>
+            <form id="student-form">
+                <div class="input-group">
+                    <label>Name:</label>
+                    <input type="text" id="name-input" required placeholder="e.g. Suprajit">
+                </div>
+                <div class="input-group">
+                    <label>Age:</label>
+                    <input type="number" id="age-input" required placeholder="e.g. 21">
+                </div>
+                <div class="input-group">
+                    <label>City:</label>
+                    <input type="text" id="city-input" required placeholder="e.g. Kolkata">
+                </div>
+                <div class="input-group">
+                    <label>Course:</label>
+                    <input type="text" id="course-input" required placeholder="e.g. Full-Stack Dev">
+                </div>
+                <div class="input-group">
+                    <label>Hobby</label>
+                    <input type="text" id="Hobby-input" placeholder="Drawing">
+                </div>
+                <button type="submit" class="submit-btn">Generate Profile Card</button>
+            </form>
+        </div>
+
+        <div class="box-container hidden" id="card-container">
+            <div class="profile-header">
+                <h2>Student Profile</h2>
+            </div>
+            <div class="profile-details">
+                <p><span class="label">Name:</span> <span id="display-name" class="data"></span></p>
+                <p><span class="label">Age:</span> <span id="display-age" class="data"></span></p>
+                <p><span class="label">City:</span> <span id="display-city" class="data"></span></p>
+                <p><span class="label">Course:</span> <span id="display-course" class="data"></span></p>
+                <p><span class="label">Status:</span> <span id="display-status" class="data" style="color: #2b6cb0;"></span></p>
+                <p><span class="label">Hobby</span> <span id="display-Hobby" class="data"></span></p>
+                
+                <p style="font-size: 14px; color: #718096; text-align: center; margin-top: 15px; border: none;">
+                    *Note: In 5 years, you will be <span id="future-age" style="font-weight: bold; color: #2d3748;"></span> years old.
+                </p>
+            </div>
+            
+            <button id="reset-btn" class="submit-btn" style="margin-top: 20px; ">Create Another</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
